@@ -1,12 +1,13 @@
 #pragma once
-
 #include <string>
 #include <vector>
 
+using namespace std;
+
 struct Sale {
     int rowId;
-    std::string product;
-    std::string country;
+    string product;
+    string country;
     int quantity;
     double unitPrice;
 
@@ -23,6 +24,6 @@ inline bool comesBefore(const Sale& a, const Sale& b, SortBy field) {
     return left == right ? a.rowId < b.rowId : left > right;
 }
 
-std::vector<Sale> loadSales(const std::string& csvPath);
-void mergeSort(std::vector<Sale>& sales, SortBy field);
-void quickSort(std::vector<Sale>& sales, SortBy field);
+vector<Sale> loadSales(const string& csvPath);
+void mergeSort(vector<Sale>& sales, SortBy field);
+void quickSort(vector<Sale>& sales, SortBy field);
