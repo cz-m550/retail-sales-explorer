@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Sales.h"
 
+using namespace std;
+
 int main() {
-    std::cout << "Retail Sales Explorer\n";
+    cout << "Retail Sales Explorer\n";
 }
