@@ -1,5 +1,10 @@
 cmake_minimum_required(VERSION 3.16)
-project(RetailSalesExplorer LANGUAGES CXX)
-
-add_executable(retail_sales main.cpp Sales.h dataLoader.h dataLoader.cpp Sorting.h MergeSort.cpp quickSort.h quickSort.cpp)
-target_compile_features(retail_sales PRIVATE cxx_std_17)
+project(RetailSalesExplorer)
+set(CMAKE_CXX_STANDARD 17)
+add_executable(retail_sales
+        main.cpp
+        dataLoader.cpp
+        Sorting.cpp
+        MergeSort.cpp
+        quickSort.cpp
+)
