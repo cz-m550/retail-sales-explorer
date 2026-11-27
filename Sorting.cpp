@@ -1,19 +1,16 @@
 #include "Sorting.h"
-
 using namespace std;
-
-bool comesBefore(const Sale& a, const Sale& b, SortBy field) {
+bool comesBefore(const Sale &a, const Sale& b, SortBy field) {
     double left;
     double right;
-
     if (field == Quantity) {
         left = a.quantity;
         right = b.quantity;
-    } else {
+    }
+    else {
         left = a.lineValue;
         right = b.lineValue;
     }
-
     if (left != right) {
         return left > right;
     }
