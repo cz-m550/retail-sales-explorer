@@ -10,18 +10,25 @@ static void merge(vector<Sale>& sales, vector<Sale>& temp,
 
     while (i < mid && j < right) {
         if (comesBefore(sales[j], sales[i], field)) {
-            temp[k++] = sales[j++];
+            temp[k] = sales[j];
+            j++;
         } else {
-            temp[k++] = sales[i++];
+            temp[k] = sales[i];
+            i++;
         }
+        k++;
     }
 
     while (i < mid) {
-        temp[k++] = sales[i++];
+        temp[k] = sales[i];
+        k++;
+        i++;
     }
 
     while (j < right) {
-        temp[k++] = sales[j++];
+        temp[k] = sales[j];
+        k++;
+        j++;
     }
 
     for (size_t index = left; index < right; index++) {
